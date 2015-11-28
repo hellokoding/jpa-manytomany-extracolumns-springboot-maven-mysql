@@ -1,4 +1,4 @@
-# JPA Many-To-Many with Extra Columns Relationship Mapping Example with Spring Boot, Maven and MySQL
+# JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Maven and MySQL
 
 ## Guide
 http://hellokoding.com/jpa-many-to-many-with-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/
