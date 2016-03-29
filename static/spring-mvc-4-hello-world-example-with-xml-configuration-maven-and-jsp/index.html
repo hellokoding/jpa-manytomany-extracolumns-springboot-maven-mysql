@@ -1,0 +1,288 @@
+
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <title>Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP</title>
+    <meta name="description" content="">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/poole.css?v=a483b161e3">
+    <link rel="stylesheet" href="../assets/css/syntax.css?v=a483b161e3">
+    <link rel="stylesheet" href="../assets/css/lanyon.css?v=a483b161e3">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=a483b161e3">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:2368/assets/apple-touch-icon-precomposed.png?v=a483b161e3">
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="canonical" href="http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="Hello Koding">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP">
+    <meta property="og:description" content="This post walks you through the process of creating a Hello World example web site with Spring MVC 4. Prerequisites JDK 1.8 or later Maven 3 or later Stack Spring MVC 4 JSP View Template Project structure ├── src │   └── main...">
+    <meta property="og:url" content="http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">
+    <meta property="article:published_time" content="2015-10-12T00:13:28.564Z">
+    <meta property="article:modified_time" content="2016-02-23T01:47:35.342Z">
+    <meta property="article:tag" content="hello">
+    <meta property="article:tag" content="mvc">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP">
+    <meta name="twitter:description" content="This post walks you through the process of creating a Hello World example web site with Spring MVC 4. Prerequisites JDK 1.8 or later Maven 3 or later Stack Spring MVC 4 JSP View Template Project structure ├── src │   └── main...">
+    <meta name="twitter:url" content="http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Hello Koding",
+    "author": {
+        "@type": "Person",
+        "name": "Giau Ngo",
+        "image": "http://hellokoding.com/content/images/2015/11/vinhkim_2.png",
+        "url": "http://hellokoding.com/author/giau",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP",
+    "url": "http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/",
+    "datePublished": "2015-10-12T00:13:28.564Z",
+    "dateModified": "2016-02-23T01:47:35.342Z",
+    "keywords": "hello, mvc",
+    "description": "This post walks you through the process of creating a Hello World example web site with Spring MVC 4. Prerequisites JDK 1.8 or later Maven 3 or later Stack Spring MVC 4 JSP View Template Project structure ├── src │   └── main..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="Hello Koding" href="http://hellokoding.com/rss/">
+  </head>
+
+  <body class="post-template tag-hello tag-mvc">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+ styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Simple examples and tutorials Made by <a href="https://twitter.com/hellokoding" target="_blank">@hellokoding</a></p>
+  </div>
+
+  <nav class="sidebar-nav">
+      <a class="sidebar-nav-item sidebar-nav-home " href="http://hellokoding.com/">Home</a>
+      <a class="sidebar-nav-item sidebar-nav-hello " href="http://hellokoding.com/tag/hello">Hello</a>
+      <a class="sidebar-nav-item sidebar-nav-jpa " href="http://hellokoding.com/tag/jpa">JPA</a>
+      <a class="sidebar-nav-item sidebar-nav-mvc " href="http://hellokoding.com/tag/mvc">MVC</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>© 2016. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="http://hellokoding.com" title="Home">Hello Koding</a>
+            <small>Simple examples and tutorials</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        
+<article class="post tag-hello tag-mvc">
+
+  <header class="post-header">
+      <h1 class="post-title">Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP</h1>
+      <section class="post-meta">
+          <time class="post-date" datetime="2015-10-12">October 12, 2015</time>. By <a href="../author/giau/">Giau Ngo</a>.
+      </section>
+  </header>
+
+  <section class="post-content">
+      <p>This post walks you through the process of creating a Hello World example web site with Spring MVC 4<sup id="fnref:1"><a href="index.html#fn:1" rel="footnote">1</a></sup>.</p>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+<li>JDK 1.8 or later</li>
+<li>Maven 3 or later</li>
+</ul>
+
+<h3 id="stack">Stack</h3>
+
+<ul>
+<li>Spring MVC 4</li>
+<li>JSP View Template</li>
+</ul>
+
+<h3 id="projectstructure">Project structure</h3>
+
+<pre><code>├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── hello
+│       │               └── web
+│       │                   └── HelloController.java
+│       ├── resources
+│       │   ├── application.properties
+│       │   └── logback.xml
+│       └── webapp
+│           ├── resources
+│           │   ├── css
+│           │   │   └── bootstrap.min.css
+│           │   ├── images
+│           │   └── js
+│           │       └── bootstrap.min.js
+│           └── WEB-INF
+│               ├── views
+│               │   └── hello.jsp
+|               ├── appconfig-mvc.xml
+│               ├── appconfig-root.xml 
+│               └── web.xml
+└── pom.xml
+</code></pre>
+
+<h3 id="projectdependencies">Project dependencies</h3>
+
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/pom.xml">
+</code></pre>
+
+<h3 id="hellocontroller">Hello Controller</h3>
+
+<p>HTTP requests are handled by a controller. The <code>HelloController</code> handle the GET requests for <code>/hello</code> by retuning the name of a <code>View</code>, "hello". A <code>View</code> is responsible for rendering the HTML content:</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/java/com/hellokoding/hello/web/HelloController.java">
+</code></pre>
+
+<p>The <code>@RequestMapping</code> annotation ensures that HTTP requests to <code>/hello</code> are mapped to the <code>hello()</code> method.</p>
+
+<p><code>@RequestParam</code> binds the value of the query string parameter <code>name</code> into the <code>name</code> parameter of the <code>hello()</code> method. This query string parameter is not <code>required</code>;if it is absent in the request, the <code>defaultValue</code> of <code>World</code> is used. The value of the <code>name</code> parameter is added to a <code>Model</code> object, ultimately making it accessible to the view template.</p>
+
+<h3 id="jspjstlviewtemplate">JSP/JSTL View Template</h3>
+
+<p>JSP performs server side rendering of the HTML. It parses the <code>hello.jsp</code> template below and evaluate the EL (Expression Language) to render the value of ${name} parameter that was set in the controller.</p>
+
+<pre><code class="language-html embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/webapp/WEB-INF/views/hello.jsp">
+</code></pre>
+
+<h3 id="xmlconfiguration">XML Configuration</h3>
+
+<p>An application usually has several XML configuration files, but there should only be ONE bootstrap file (<code>appconfig-root.xml</code>). This bootstrap file should use the <code>&lt;import resource="" /&gt;</code> to include other config files<sup id="fnref:3"><a href="index.html#fn:3" rel="footnote">3</a></sup>.</p>
+
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/webapp/WEB-INF/appconfig-root.xml">
+</code></pre>
+
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/webapp/WEB-INF/appconfig-mvc.xml">
+</code></pre>
+
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/webapp/WEB-INF/web.xml">
+</code></pre>
+
+<h3 id="testingtheservice">Testing the service</h3>
+
+<p>You can run the application using <code>mvn jetty:run</code>. <br>
+Visit to <a href="http://localhost:8080/hello">http://localhost:8080/hello</a> you will see  </p>
+
+<pre><code>Hello World!  
+</code></pre>
+
+<p>Provide the <code>name</code> query string parameter with <a href="http://localhost:8080/hello?name=Koding">http://localhost:8080/hello?name=Koding</a>  </p>
+
+<pre><code>Hello Koding!  
+</code></pre>
+
+<h3 id="sourcecode">Source code</h3>
+
+<p><code>git@github.com:hellokoding/hello-springmvc-xml-maven-jsp.git</code>
+<a href="https://github.com/hellokoding/hello-springmvc-xml-maven-jsp">https://github.com/hellokoding/hello-springmvc-xml-maven-jsp</a></p>
+
+<h3 id="references">References</h3>
+
+<div class="footnotes"><ol><li class="footnote" id="fn:1"><p><a href="http://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/mvc.html">Web MVC Framework</a> <a href="index.html#fnref:1" title="return to article">↩</a></p></li>
+<li class="footnote" id="fn:2"><p><a href="https://spring.io/guides/gs/serving-web-content/">Serving Web Content with Spring MVC</a> <a href="index.html#fnref:2" title="return to article">↩</a></p></li>
+<li class="footnote" id="fn:3"><p><a href="http://gordondickens.com/wordpress/2012/07/30/enterprise-spring-framework-best-practices-part-3-xml-config/">Enterprise Spring Framework Best Practices – Part 3 – XML Config</a> <a href="index.html#fnref:3" title="return to article">↩</a></p></li></ol></div>
+      Tags: <a href="../tag/hello/">hello</a>, <a href="../tag/mvc/">mvc</a>
+      <div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="hellokoding">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </div>
+  </section>
+
+  <footer class="post-footer">
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '2'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+
+      s.src = '//hellokoding.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </footer>
+
+</article>
+
+      </div>
+    </div>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+      <script>
+        (function(document) {
+          var toggle = document.querySelector('.sidebar-toggle');
+          var sidebar = document.querySelector('#sidebar');
+          var checkbox = document.querySelector('#sidebar-checkbox');
+          var trigger = 'ontouchstart' in document ? 'touchstart' : 'click';
+
+          document.addEventListener(trigger, function(e) {
+            var target = e.target;
+
+            if(!checkbox.checked ||
+               sidebar.contains(target) ||
+               (target === checkbox || target === toggle)) return;
+
+            checkbox.checked = false;
+          }, false);
+        })(document);
+      </script>
+
+    <script type="text/javascript" src="../assets/js/prism.js?v=a483b161e3"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/giaunv/github-files/29ae36a42176ddb25208c6ff7788510169823bbb/src/main/javascript/github-files.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69010825-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
