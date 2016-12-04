@@ -36,7 +36,7 @@ public class Book{
         this.name = name;
     }
 
-    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, orphanRemoval = true)
     public Set<BookPublisher>   getBookPublishers() {
         return bookPublishers;
     }
